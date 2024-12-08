@@ -38,9 +38,9 @@
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [
-    "/home/tifennf/Documents/PlatformIO/Projects/Hello World/include",
-    "/home/tifennf/Documents/PlatformIO/Projects/Hello World/src",
-    "/home/tifennf/Documents/PlatformIO/Projects/Hello World/.pio/libdeps/esp32-c3-devkitm-1/U8g2/src",
+    "/home/tifennf/Documents/PlatformIO/Projects/Communicate/include",
+    "/home/tifennf/Documents/PlatformIO/Projects/Communicate/src",
+    "/home/tifennf/Documents/PlatformIO/Projects/Communicate/.pio/libdeps/esp32-c3-devkitm-1/U8g2/src",
     "/home/tifennf/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
     "/home/tifennf/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
     "/home/tifennf/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32c3/include/newlib/platform_include",

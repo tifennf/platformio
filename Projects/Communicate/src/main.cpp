@@ -30,21 +30,23 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
 
-    if (Serial.available() > 0) {
-        char buffer[256];
-        char* ptrBuffer = buffer;  // cpp things
+    u8g2.clearBuffer();  // on nettoie le buffer avant de l'utiliser
 
-        parse_msg(Serial.readStringUntil('\n'), &ptrBuffer);
+    if (Serial.available() > 0) {
+        char msg[256];
+        char* ptrMsg = msg;  // cpp things
+
+        parse_msg(Serial.readStringUntil('\n'), &ptrMsg);
 
         Serial.print("Message envoyé : ");
-        Serial.println(buffer);
+        Serial.println(msg);
 
-        // affichage de plusieurs strings sur l'écran
-        u8g2.clearBuffer();  // on nettoie le buffer avant de l'utiliser
-        u8g2.drawStr(10, 30, buffer);           // on y écrit Hello world
-        u8g2.drawStr(10, 40, "\\ (o u o ) /");  // on écrit autre chose
-        u8g2.sendBuffer();                      // on envoi le buffer via Wire
+        u8g2.drawStr(10, 30, msg);  // on écrit le message dans le buffer
     }
+
+    u8g2.drawStr(10, 40, "\\ (o u o ) /");
+    u8g2.sendBuffer();  // on écrit le buffer via Wire pour l'afficher sur
+                        // l'écran
 
     delay(1000);  // on attend 1 seconde à la fin de chaque tour
 }
